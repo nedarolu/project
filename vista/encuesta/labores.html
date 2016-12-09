@@ -1,0 +1,195 @@
+
+<div  class="row col-sm-12  col-md-12">
+	
+	<a href="#" data-toggle='modal' data-target='#myLote'>Agregar lote</a>   
+
+	<table class="table" style="padding-top: 15px">
+	        <thead>
+	          <tr>
+	                <th>Variedad</th>
+	                <th>Tipo</th>
+	                <th>edad</th>
+	                <th>Sombrio</th>
+	                <th>S. siembra</th>
+	                <th >D. surcos</th>
+	                <th>D. plantas</th>
+	                <th>Plantas sitio</th>
+	                <th></th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+	                <td>Castillo</td>
+	                <td>Convencional</td>
+	                <td class="hidden-xs">12</td>
+	                <td>Semisombra</td>
+	                <td>Triangulo</td>
+	                <td class="hidden-xs">1.50</td>	
+	                <td>1.20</td>
+	                <td>1</td>
+	                <td><a onclick=evt_labor(); class="glyphicon glyphicon-list-alt"></a></td>
+	          </tr>
+	        </tbody>
+	</table>
+</div>
+
+<div id="myLabor" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Formulario Finca</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="frmFinca" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class=" col-sm-12">
+                                
+                            	 <label for="codigo">Número lote</label>
+						   		 <input type="number" class="form-control" id="NLote" placeholder="">
+
+						   		 <!-- tipo de cultivo-->
+						   		<label for="tipo">Tipo Cultivo</label>
+						   		<select class="form-control" id="sel1">
+								    <option>Convencional</option>
+								    <option>Orgánico</option>								  	
+								</select>
+
+								<!-- Variedad-->
+						   		<label for="variedad">Variedad</label>
+						   		<select class="form-control" id="sel2">
+									<option>Castillo</option>
+								  	<option>Caturra</option>								  	
+								</select>
+							 	
+								<!-- sombra-->	
+						   		<label for="sistema">Sombrio</label>
+						   		<select class="form-control" id="sel3">
+									<option>Sol</option>
+								  	<option>Sombra</option>								  	
+								</select>
+						
+								<!--  	sistema -->
+						   		<label for="variedad">Sistema de siembra</label>
+						   		<select class="form-control" id="sel2">
+								  <option>Cuadrado</option>
+								  <option>Triángulo</option>
+		                          <option>Fajas</option>
+		                          <option>Surcos dobles</option>								  	
+								</select>
+							 	
+                     			<!-- edad-->
+						   		 <label for="edad">Edad(Meses)</label>
+						   		 <input type="number" class="form-control" id="edad" placeholder="">
+						 	
+					
+								<!-- numero de arboles -->            
+						   		 <label for="edad">Número Arboles</label>
+						   		 <input type="number" class="form-control" id="edad" placeholder="">
+
+						   		 <!-- d entre surcos -->
+						   		 <label for="edad">Distancia entre surcos</label>
+						   		 <input type="text" class="form-control" id="edad" placeholder="">
+						 	
+			                	<!-- d entre plantas -->
+						   		 <label for="edad">Distancia entre plantas</label>
+						   		 <input type="text" class="form-control" id="edad" placeholder="">
+						
+								<!-- d entre fajas -->
+						   		 <label for="distancia">Distancia entre fajas</label>
+						   		 <input type="text" class="form-control" id="txtDistancia"
+						           placeholder="">
+						
+						 		<!-- plantas en sitio -->
+						   		 <label for="distancia">Número de plantas por sitio</label>
+						   		 <input type="text" class="form-control" id="txtCapacidadCarga"
+						           placeholder="">                            
+                            </div>
+                        </div>
+                    </form>							
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success button">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+<div class="row col-sm-6 col-md-6 col-md-offset-2"> 
+	<div class="panel panel-success">
+          <div class=" panel-heading">                     				
+	 	  	  <h4>Registro Lote</h4>
+	 	  	  </div>
+	 	  	  <div class="panel-body col-md-offset-1"> 		
+	      <form role="form">					                                                     
+				 	<div class="form-group col-sm-9">
+				   		 <label for="codigo">Código cultivo</label>
+				   		 <input type="number" class="form-control" id="NLote" placeholder="">
+				 	</div>
+					<div class="form-group col-sm-9">
+				   		<label for="tipo">Tipo Cultivo</label>
+				   		<select class="form-control" id="sel1">
+						    <option>Convencional</option>
+						    <option>Orgánico</option>								  	
+						</select>
+				 	</div>		
+					<div class="form-group col-sm-9">
+				   		<label for="variedad">Variedad</label>
+				   		<select class="form-control" id="sel2">
+							<option>Castillo</option>
+						  	<option>Caturra</option>								  	
+						</select>
+				 	</div>	
+				 	<div class="form-group col-sm-9">
+				   		<label for="sistema">Sistema</label>
+				   		<select class="form-control" id="sel3">
+							<option>Sol</option>
+						  	<option>Sombra</option>								  	
+						</select>
+				 	</div>
+				 	<div class="form-group col-sm-9">
+				   		<label for="variedad">Sistema de siembra</label>
+				   		<select class="form-control" id="sel2">
+						  <option>Cuadrado</option>
+						  <option>Triángulo</option>
+                          <option>Fajas</option>
+                          <option>Surcos dobles</option>								  	
+						</select>
+				 	</div>                                   
+                     <div class="form-group col-sm-9">
+				   		 <label for="edad">Edad(Meses)</label>
+				   		 <input type="number" class="form-control" id="edad" placeholder="">
+				 	</div>
+					
+                    <div class="form-group col-sm-9">
+				   		 <label for="edad">Número Arboles</label>
+				   		 <input type="number" class="form-control" id="edad" placeholder="">
+				 	</div> 
+                    <div class="form-group col-sm-9">
+				   		 <label for="edad">Distancia entre surcos</label>
+				   		 <input type="text" class="form-control" id="edad" placeholder="">
+				 	</div> 
+                    <div class="form-group col-sm-9">
+				   		 <label for="edad">Distancia entre plantas</label>
+				   		 <input type="text" class="form-control" id="edad" placeholder="">
+				 	</div> 
+				 	<div class="form-group col-sm-9">
+				   		 <label for="distancia">Distancia entre fajas</label>
+				   		 <input type="text" class="form-control" id="txtDistancia"
+				           placeholder="">
+				 	</div>
+				 	<div class="form-group col-sm-9">
+				   		 <label for="distancia">Número de plantas por sitio</label>
+				   		 <input type="text" class="form-control" id="txtCapacidadCarga"
+				           placeholder="">
+				 	</div>
+				 	 <div class="form-group col-sm-9">
+			  		<button type="button" class="btn btn-primary button">Registrar</button>
+                    </div>
+			</form>	
+			</div>
+          </div>
+</div>-->
+		

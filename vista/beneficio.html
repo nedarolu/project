@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">	        
+        <link rel="stylesheet" href="../file/css/bootstrap.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="../file/css/style.css">
+		<link rel="stylesheet" href="../file/css/simple-sidebar.css">
+		<script src="../file/js/action.js"></script>  
+		<script type="text/javascript">
+		function enlace(){
+		 $('.container').load('encuesta/lote.html');
+		   }
+		   function btnLoteSiguiente(){	
+		 $(".container").empty();	
+		 $('.container').load('encuesta/beneficio.html');
+		   }
+		   function btnLaborSiguiente(){	
+		 $(".container").empty();	
+		 $('.container').load('encuesta/lote.html');
+		   }
+		  function btnComercio(){	
+		 $(".container").empty();	
+		 $('.container').load('encuesta/transporte.html');
+		   }
+
+		function btnTransporte(){
+
+		 $(".container").empty();	
+		 $('.container').load('encuesta/beneficio.html');
+		   }
+
+		   function btnTransporteSiguiente(){	
+		 $(".container").empty();	
+		 $('.container').load('encuesta/comercio.html');
+		   }
+
+
+		   function btnBeneficio(){		  
+		 $(".container").empty();	
+		 $('.container').load('encuesta/lote.html');
+		   }
+
+		   function btnBeneficioSiguiente(){	
+		 $(".container").empty();	
+		 $('.container').load('encuesta/transporte.html');
+		   }
+
+
+			$(function(){ 
+
+			  $('.container').load('encuesta/finca.html');  			  
+
+                
+	        	/*$('#btnComercio').click(function(){
+	        		alert('saludos'); 
+	        		$('.container').load('encuesta/transporte.html');
+	           	});*/
+
+		        
+	        	$('#btn_benefi').click(function(){
+	        		$('.container').load('encuesta/beneficio.html');
+	           	});
+
+	        	$('#btn_transp').click(function(){
+	        		$('.container').load('encuesta/transportetabla.html');
+	           	});
+
+	           	$('#btn_comerc').click(function(){
+	        		$('.container').load('encuesta/comercio.html');
+	           	});
+
+	           	$('#btn_lote').click(function(){
+	        		$('.container').load('encuesta/lote.html');
+	           	});
+
+	           	$('.btnFinca').click(function(){
+	        		$('.container').load('encuesta/finca.html');
+	           	});
+
+           	});
+
+		</script>
+	</head>
+	<body>
+		<header> 
+			<nav class="navbar navbar-default navbar-fixed-top">			
+			</nav>
+		</header>
+		<div id="wrapper" style="padding-top: 50px;">
+			<div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    
+                    <li>
+                        <a href="#" class="btnFinca">Finca</a>
+                    </li>
+                    <li>
+                        <a  href="#" id="btn_lote">Lote</a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn_benefi">Beneficio</a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn_transp">Transporte</a>
+                    </li>
+                    <li>
+                        <a href="#" id="btn_comerc">Comercialización</a>
+                    </li>               
+
+
+                </ul>
+            </div>
+             <div id="page-content-wrapper">
+				<section class="main container">					
+
+					
+				</section>	
+			</div>
+		</div>
+	<script src="../file/js/jquery-1.11.2.js"></script>
+	<script src="../file/js/bootstrap.min.js"></script>
+	</body>
+</html>
