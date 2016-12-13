@@ -2,76 +2,50 @@
 	<head>
 		<title></title>
 		<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	        
-       
-          <link rel="stylesheet" href="../file/css/bootstrap.css">
-       <link rel="stylesheet" href="../file/css/estilos.css">     
+			<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	      
+         <link rel="stylesheet" href="../file/css/bootstrap.css">  
+       <link rel="stylesheet" href="../file/css/estilos.css">           
         <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../file/js/main.js"></script>
-    <script src="../file/js/jquery-1.11.2.js"></script>
-		
-		
-	
-		<script type="text/javascript">
-		
-              
-			 $(function(){ 
-
-			 		  
-
-                
-	        	$('#btnComercio').click(function(){
-	        	 
-	        		$('.container').load('encuesta/transporte.html');
-	           	});
-
-		        
-	        	$('#btFinca').click(function(){
-	        		alert("Saludos");
-	        		$('.container').load('encuesta/finca.html');
-	           	});
-
-	        	$('#btLote').click(function(){
-	        		$('.container').load('encuesta/lote.html');
-	           	});
-
-	           	$('#btBeneficio').click(function(){
-	        		$('.container').load('encuesta/Beneficio.html');
-	           	});
-
-	           	$('#btTransporte').click(function(){
-	        		$('.container').load('encuesta/transporte.html');
-	           	});
-
-	           	$('#btComercio').click(function(){
-	        		$('.container').load('encuesta/comercio.html');
-	           	});
-
-           	});
-              
+    <script src="../file/js/jquery-1.11.2.js"></script>	
+	<script type="text/javascript">
+	       function iniciar(){ $('.container').load('encuesta/lote.html');}
+		  function principal(){ $('.container').load('main.html');}
+		  function propietario(){ $('.container').load('propietario2.html');}
+		  function asociacion(){ $('.container').load('asociacion2.html');}
+		  function finca(){ $('.container').load('finca2.html');}
+		  function vereda(){ $('.container').load('vereda2.html');}
+		  function usuario(){ $('.container').load('usuario2.html');}             
+		  $(function(){ 		 	 
+                $('.container').load('main.html');                
+	        	$('#btnComercio').click(function(){$('.container').load('encuesta/transporte.html');});		        
+	        	$('#btFinca').click(function(){$('.container').load('encuesta/finca.html');});
+	        	$('#btLote').click(function(){ $('.container').load('encuesta/lote.html'); });		
+	            $('#btBeneficio').click(function(){$('.container').load('encuesta/beneficio.html');});
+	           	$('#btTransporte').click(function(){ $('.container').load('encuesta/transporte.html'); 	});          
+                $('#btComercio').click(function(){ $('.container').load('encuesta/comercio.html'); });
+	            });           
           
-		</script>
+	</script>
 	</head>
 	<body>
 		<header> 
-			 <div class="menu_bar">
+		   <div class="menu_bar  navbar-fixed-top">
             <a href="#" class="bt-menu"><span class="icon-list2"></span>Mild Coffee</a>
-        </div>
-
-        <nav>
-
+        </div> 
+        <nav >
+         
             <ul>
-                <!-- <li><a href="#"><span class="icon-house"></span>Principal</a></li>-->
+                 <li><a href="#" onclick="principal();"><span class="icon-house"></span>Principal</a></li>
                  <li class="submenu">
-
                     <a href="#">
                         <span class="icon-rocket"></span>Registro<span class="caret icon-arrow-down6"></span>
                     </a>
                     <ul class="children">
-                        <li><a href="#" >Propietario<span class="icon-dot"></span></a></li>
-                        <li><a href="#">Asociación<span class="icon-dot"></span></a></li>
-                        <li><a href="#">Finca<span class="icon-dot"></span></a></li>
-                          <li><a href="#">Vereda<span class="icon-dot"></span></a></li>
+                        <li><a href="#"  onclick="propietario();">Propietario<span class="icon-dot"></span></a></li>
+                        <li><a href="#"  onclick="asociacion();">Asociación<span class="icon-dot"></span></a></li>
+                        <li><a href="#" onclick="finca();">Finca<span class="icon-dot"></span></a></li>
+                          <li><a href="#" onclick="vereda();">Vereda<span class="icon-dot"></span></a></li>
                     </ul>
                 </li>                
                 <li class="submenu">
@@ -86,28 +60,28 @@
                         <li><a href="#" id="btComercio">Comercio<span class="icon-dot"></span></a></li>
                     </ul>
                 </li>
-
                   <li class="submenu">
                     <a href="#">
                         <span class="icon-rocket"></span>Configuracion<span class="caret icon-arrow-down6"></span>
                     </a>
                     <ul class="children">
-                        <li><a href="#">Registro Usuario<span class="icon-dot"></span></a></li>
-                        
-                    </ul>
-                </li>
-                
+                        <li><a href="#" onclick="usuario();">Registro Usuario<span class="icon-dot"></span></a></li>                       
+                   </ul>
+                </li>                
                 <li><a href="#"><span class="icon-mail"></span>Contacto</a></li>
             </ul>
         </nav>
-		</header>
-        
-		 <div id="page-content-wrapper">
-				<section class="main container">					
 
-					
-				</section>	
-			</div>
-			
+		</header> 
+
+
+		 
+				 <div id="page-content-wrapper"  style="margin-top: 10px;">
+                <section class="main container">                    
+
+                    
+                </section>  
+            </div>
+           
 	</body>
-</html>
+</html> 

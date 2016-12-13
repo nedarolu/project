@@ -6,11 +6,13 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
 	<link rel="stylesheet" href="file/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
-   <link rel="stylesheet" href="file/css/style.css">
+    <script type="text/javascript" src="file/js/jssor.slider.mini.js"></script>
+    <script src="file/js/jquery-1.11.2.js"></script> 
+    <script src="file/js/script.js"></script>    
 
 <style type="text/css">
       nav.navbar {
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 nav.navbar ul.nav li {
@@ -19,22 +21,56 @@ nav.navbar ul.nav li {
     
 }
 
+footer{
+
+    width: 100%;
+    height: 100px;
+    background-color:  rgba(36, 46, 50, 0.9);
+    color: white;
+
+    }
+
+    /* next*/  /* Bifurbicar */
+
+    .jssorb21 {
+                    position: absolute;
+                }
+                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                    position: absolute;
+                   
+                    width: 19px;
+                    height: 19px;
+                    text-align: center;
+                    line-height: 19px;
+                    color: white;
+                    font-size: 12px;
+                    background: url(img/b05.png) no-repeat;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+                .jssorb21 div { background-position: -5px -5px; }
+                .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+                .jssorb21 .av { background-position: -65px -5px; }
+                .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+
+
+
+                /*  next 2*/
+
 </style>
 </head>
 <body>
  <header>
 <nav class="navbar navbar-default navbar-fixed-top">
-
   <div class="container-fluid">
     <div class="navbar-header">
     <a class="navbar-brand " href="#" >
-        <img alt="" src="img/ucc.png">
-      </a>
-
+        <img alt="" src="img/ucc.png">      </a>
       <button type="button" class="navbar-toggle collapsed" 
             data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
        <span class="icon-bar"></span>
+
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         
@@ -51,9 +87,6 @@ nav.navbar ul.nav li {
     </div>
   </div>
 
-
-
- 
 </nav>
  </header>
 
@@ -85,54 +118,12 @@ nav.navbar ul.nav li {
             </div>
             
           
-            <style>
-               
-                .jssorb21 {
-                    position: absolute;
-                }
-                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-                    position: absolute;
-                   
-                    width: 19px;
-                    height: 19px;
-                    text-align: center;
-                    line-height: 19px;
-                    color: white;
-                    font-size: 12px;
-                    background: url(img/b05.png) no-repeat;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-                .jssorb21 div { background-position: -5px -5px; }
-                .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-                .jssorb21 .av { background-position: -65px -5px; }
-                .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
-            </style>
-          
             <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
                 
                 <div u="prototype"></div>
             </div>
           
-            <style>
-           
-                .jssora21l, .jssora21r {
-                    display: block;
-                    position: absolute;
-                   
-                    width: 55px;
-                    height: 55px;
-                    cursor: pointer;
-                    background: url(img/a21.png) center center no-repeat;
-                    overflow: hidden;
-                }
-                .jssora21l { background-position: -3px -33px; }
-                .jssora21r { background-position: -63px -33px; }
-                .jssora21l:hover { background-position: -123px -33px; }
-                .jssora21r:hover { background-position: -183px -33px; }
-                .jssora21l.jssora21ldn { background-position: -243px -33px; }
-                .jssora21r.jssora21rdn { background-position: -303px -33px; }
-            </style>
+          
             
             <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">
             </span>
@@ -140,70 +131,8 @@ nav.navbar ul.nav li {
             <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">
             </span>
          
-            <a style="display: none" href="http://www.jssor.com">Bootstrap Carousel</a>
-        </div>
-
-
-        <script src="file/js/jquery-1.11.2.js"></script> 
-   
-    <script type="text/javascript" src="file/js/jssor.slider.mini.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-
-            var options = {
-                $FillMode: 2,                                       
-                $AutoPlay: true,                                     
-                $Idle: 4000,                            
-                $PauseOnHover: 1,                    
-                $ArrowKeyNavigation: true,                     
-                $SlideEasing: $JssorEasing$.$EaseOutQuint,         
-                $SlideDuration: 800,                               
-                $MinDragOffsetToSlide: 20,                          
-                $SlideSpacing: 0,                           
-                $Cols: 1,                                  
-                $ParkingPosition: 0,                                 
-                $UISearchMode: 1,                                    
-                $PlayOrientation: 1,                                 
-                $DragOrientation: 1,                               
-              
-                $BulletNavigatorOptions: {                          
-                    $Class: $JssorBulletNavigator$,                 
-                    $ChanceToShow: 2,                               
-                    $AutoCenter: 1,                                 
-                    $Steps: 1,                                      
-                    $Rows: 1,                                      
-                    $SpacingX: 8,                                   
-                    $SpacingY: 8,                                   
-                    $Orientation: 1,                                
-                    $Scale: false                                   
-                },
-
-                $ArrowNavigatorOptions: {                            
-                    $Class: $JssorArrowNavigator$,                  
-                    $ChanceToShow: 1,                               
-                    $AutoCenter: 2,                                 
-                    $Steps: 1                                        
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-
-         
-            function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
-            ScaleSlider();
-
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-          
-        });
-    </script>
+        </div>       
+ 
     
     <!--login --> 
    <div id="login" class="modal  fade " role="dialog">
@@ -333,6 +262,13 @@ Y un modelo de producción que integra aproximadamente a 499 familias cafeteras 
     </div>
   </div>
 </div>
+
+<footer>
+  <div class="container" id="footer">
+    <h2 class="text-center"> Pie de pagina </h2>
+  </div>
+</footer>
+
 <script src="file/js/jquery-1.11.2.js"></script>
 <script src="file/js/bootstrap.min.js"></script>
 </body>
